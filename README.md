@@ -1,23 +1,7 @@
 # goodReadmeGenerator
 
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+This is a command-line README generator app that uses inquirer npm and javascript. This application will help users easily create a professional README file for their projects. When the js file is opened, the user will open terminal to install the inquirer npm. Next, type in "node index.js" and hit enter to start the generator. The generator will prompt several questions for the user to fill out for their README. After answering all the questions, the generator will create a new README file for the user. Check out the example README file, [].
 
-WHEN I enter my project title
-THEN this is displayed as the title of the README
+Video:
 
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
+Screenshot:
