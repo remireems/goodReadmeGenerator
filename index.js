@@ -1,15 +1,9 @@
+// access the installed npms
 const fs = require('fs')
-const inquirer = require('inquirer')
+const { prompt } = require('inquirer')
 
-
-
-
-// array of questions for user
-// const questions = [
-
-// ];
-
-inquirer.prompt([
+// prompts the user to input project info into their readme
+prompt([
   {
     name: 'title',
     type: 'input',
@@ -58,8 +52,11 @@ inquirer.prompt([
   }
 ])
   .then(res => {
+    // how the no license info will display on the readme
     let licInfo = 'This project does not have a license.'
     let licType = 'None'
+
+    // conditional for when a type of license is chosen
     if (res.license === 'MIT License') {
       licInfo = 'This project uses a MIT License.'
       licType = 'MIT'
@@ -68,6 +65,7 @@ inquirer.prompt([
       licType = 'GNU%20GLPv3'
     }
 
+// variable for readme format
 const readmeInfo = `# ${res.title} ![License badge](https://img.shields.io/badge/License-${licType}-brightgreen)
     
 ## Description
@@ -103,7 +101,7 @@ GitHub: [${res.username}](https://github.com/${res.username})
 
 Email: ${res.email}
 `
-
+    // function to write README file
     fs.writeFile('README1.md', readmeInfo, err => {
       if (err) {
         console.log(err)
@@ -115,17 +113,3 @@ Email: ${res.email}
   .catch(err => {
     console.log(err)
   })
-
-
-
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// // function to initialize program
-// function init() {
-
-// }
-
-// // function call to initialize program
-// init()
